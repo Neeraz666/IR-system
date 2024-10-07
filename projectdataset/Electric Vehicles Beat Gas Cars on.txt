@@ -1,0 +1,17 @@
+Electric Vehicles Beat Gas Cars on Climate Emissions over Time
+https://www.scientificamerican.com/article/electric-vehicles-beat-gas-cars-on-climate-emissions-over-time/
+New research says building electric vehicles leaves a bigger carbon footprint than making gas-powered cars, though EVs make up the difference in the long run The production of battery-powered vehicles creates more carbon dioxide than making those that run on gasoline, a new report says. But EVs overcome the emissions difference relatively quickly.
+
+An average EV produced in the U.S. in 2023 will close the gap in about 2.2 years or 25,000 miles, according to analysis released Monday by Bloomberg New Energy Finance.
+
+After that, electric vehicles emit significantly less CO2 than internal combustion vehicles, particularly when considering how long a typical car stays in service. And the advantage likely will increase as electric generation becomes cleaner, the paper said.
+
+“Just like any car, you have to remember they’re going to be on the road about 10 years,” said Corey Cantor, a senior associate at BNEF who helped write the study.
+
+The break-even period is longer in other countries — four years in the U.K., 5.1 years in Germany, 5.6 years in Japan and 9.6 years in China. But by 2030, it’s projected to be significantly shorter — two years in the U.K., 2.1 years in Germany, 3.1 years in Japan and 4.6 years in China.
+
+The research addresses one of the central criticisms of electric vehicles — the amount of pollution created by the battery supply chain, which is still centered in China.
+
+The payback period is slightly higher than the last time BNEF calculated the emissions from EVs, but that’s due in part to changes in methodology. The new version of the study is based on the larger batteries that are common in the U.S., for instance, and it assumes that batteries are produced in China rather than the United States.
+
+Emissions from battery production are expected to fall as the Inflation Reduction Act forces companies to move production to the United States. The law also provides incentives to clean up the electric generation industry.

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoSearch</title>
+    <style>
+        body {
+            font-family: 'Verdana', sans-serif;
+            /* background-color: #f0f4f8; Light blue-gray */
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            margin-top: 5em;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 1rem 0;
+            color: #2c3e50; /* Darker blue */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .searchform {
+            width: 100%;
+            max-width: 600px;
+            display: flex;
+            margin-top: 2em;
+            margin-bottom: 20px;
+        }
+
+        .searchform input {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            border: 2px solid #bdc3c7; /* Gray */
+            border-radius: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: border 0.3s, box-shadow 0.3s;
+        }
+
+        .searchform input:focus {
+            outline: none;
+            border: 2px solid #2980b9; /* Bright blue */
+            box-shadow: 0 0 5px rgba(41, 128, 185, 0.5);
+        }
+
+        .searchform button {
+            margin-left: 10px;
+            padding: 15px 20px;
+            font-size: 16px;
+            background-color: #2980b9; /* Bright blue */
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .searchform button:hover {
+            background-color: #1f618d; /* Darker blue */
+            transform: scale(1.05);
+        }
+
+        #results {
+            width: 100%;
+            max-width: 600px;
+            margin-top: 20px;
+            display: grid;
+            gap: 15px;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        }
+
+        .result-item {
+            background-color: #ffffff; /* White */
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .result-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .result-item p {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .result-item a {
+            color: #2980b9; /* Bright blue */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .result-item a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>EcoSearch: Know the Climate Change</h1>
+
+    <div class="searchform">
+        <input type="text" id="query" placeholder="Enter your search query" autofocus>
+        <button onclick="search()">Search</button>
+    </div>
+
+    <div id="results"></div>
+
+    <script>
+        async function search() {
+            const query = document.getElementById('query').value;
+
+            if (!query) {
+                alert('Please enter a search query');
+                return;
+            }
+
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '<p>Loading...</p>'; // Loading message
+
+            try {
+                const response = await fetch('http://localhost:5000/search', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ query })
+                });
+
+                if (!response.ok) {
+                    const errorText = await response.text();
+                    console.error('Error response:', errorText);
+                    throw new Error('Network response was not ok');
+                }
+
+                const results = await response.json();
+                resultsDiv.innerHTML = ''; // Clear previous results
+
+                if (results.results.length > 0) {
+                    results.results.forEach(result => {
+                        const resultItem = document.createElement('div');
+                        resultItem.classList.add('result-item');
+
+                        const titleContent = result.url ? `<a href="${result.url}" target="_blank">${result.title}</a>` : result.title;
+                        const descriptionContent = result.description.length > 90 ? result.description.substring(0, 90) + '...' : result.description;
+
+                        resultItem.innerHTML = `
+                        <p><strong>${titleContent}</strong> </p>
+                        <p><strong>Score:</strong> ${result.similarity.toFixed(4)}</p>
+                        <p>${descriptionContent}</p>
+                    `;
+                        resultsDiv.appendChild(resultItem);
+                    });
+                } else {
+                    resultsDiv.innerHTML = '<p>No results found</p>';
+                }
+            } catch (error) {
+                resultsDiv.innerHTML = '<p>Error occurred while searching</p>';
+                console.error('Error details:', error);
+            }
+        }
+    </script>
+</body>
+
+</html>

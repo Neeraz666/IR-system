@@ -1,0 +1,13 @@
+What are the economic costs of climate inaction?
+https://iiasa.ac.at/news/apr-2024/what-are-economic-costs-of-climate-inaction
+A new study by an international team of researchers quantified the impacts of climate change on gross domestic product (GDP) across the globe, revealing a global GDP loss of 10% if the planet warms by more than 3ºC. Traditionally, estimates of how climate change will affect global economies have focused on relating impacts to mean temperature changes. However, the additional impacts of variability and extremes in rainfall and temperature have remained largely unexplored, until now.
+
+The study, conducted by scientists from the Swiss Federal Institute of Technology in Zurich (ETH Zurich), IIASA, and the University of Delaware, reveals that if global warming continues to 3ºC, global GDP will decrease by up to 10% - with the worst impacts in less developed countries. At the same time, limiting global warming to 1.5ºC could reduce the global economic costs of climate change by around two-thirds.
+
+“When it comes to climate variability and extremes, it is crucial that we can understand and quantify their financial impacts and how those will change over time,” says study coauthor Jarmo Kikstra, a researcher in the IIASA Energy, Climate, and Environment Program. “Looking at countries in their entirety and all climate indicators combined, our results suggest that climate change comes at a substantial cost to populations around the world. While we cannot rule out partial benefits for some territories in very high latitudes, such benefits are quite rare.”
+
+Looking only at the increased risk of extreme rainfall, global warming of 3ºC reduces global GDP by 0.2% on average. This may not sound like a lot, but at the current size of the global economy it would equal US$200 billion. Much of these costs occur in China and the US which, unlike warmer tropical regions, are less used to extreme rainfall.
+
+Among the extreme events considered, heatwaves are the most impactful. The study suggests that nearly half of the global economic damage at 3ºC of global warming may be related to extreme heat.
+
+Projecting the impacts of climate variability and extremes is complex, and substantial uncertainties remain. When answering the question of how much climate change will cost, the research team concedes that uncertainties are primarily socioeconomic: how long the impacts persist and how well society can adapt. Yet, how rainfall and climate extremes will evolve needs to be better understood. Since the study does not include non-economic impacts such as droughts, sea-level rise, and climate tipping points, the authors argue that the total cost of climate change is likely considerably higher.
